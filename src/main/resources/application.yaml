@@ -1,0 +1,19 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flywise
+    username: postgres
+    password: admin
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update  # Change to 'update' to keep data when restarting
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true  # Show SQL queries in logs
