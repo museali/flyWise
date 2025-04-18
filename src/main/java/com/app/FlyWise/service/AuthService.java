@@ -5,12 +5,15 @@ import com.app.FlyWise.model.User;
 import com.app.FlyWise.repository.UserRepository;
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AuthService {
+public class AuthService{
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
