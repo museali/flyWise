@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
   const navigate = useNavigate();
   const [flights, setFlights] = useState([]);
   const [error, setError] = useState('');
+  const [search, setSearch] = useState({
+    origin: '',
+    destination: '',
+    date: ''
+  });
 
   const handleLogout = async () => {
     const username = localStorage.getItem('username');
@@ -24,7 +29,7 @@ function Dashboard() {
     }
   };
 
-  const fetchFlights = async () => {
+  const fetchFlights = async (origin, destination, date) => {
     const token = localStorage.getItem('accessToken');
     if (!token) {
       setError('No token found');
@@ -32,10 +37,11 @@ function Dashboard() {
     }
 
     try {
-      const res = await fetch(`http://localhost:8080/api/flights/search?origin=Paris&destination=London&date=2024-06-15`, {
+      const url = `http://localhost:8080/api/flights/search?origin=${origin}&destination=${destination}&date=${date}`;
+
+      const res = await fetch(url, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         }
       });
@@ -49,26 +55,57 @@ function Dashboard() {
       }
 
       const data = await res.json();
-      console.log('Fetched flights:', data);
       setFlights(data);
+      setError('');
     } catch (err) {
-      console.error('Error fetching flights:', err);
+      console.error('Fetch failed:', err);
       setError('❌ Failed to fetch flights.');
     }
   };
 
-  useEffect(() => {
-    fetchFlights();
-  }, []);
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    fetchFlights(search.origin, search.destination, search.date);
+  };
 
   return (
     <div>
       <h2>Dashboard</h2>
       <button onClick={handleLogout}>Logout</button>
 
+      <hr />
+
+      <h3>Search Flights</h3>
+      <form onSubmit={handleSearchSubmit}>
+        <input
+          type="text"
+          name="origin"
+          placeholder="Origin"
+          value={search.origin}
+          onChange={(e) => setSearch({ ...search, origin: e.target.value })}
+          required
+        />
+        <input
+          type="text"
+          name="destination"
+          placeholder="Destination"
+          value={search.destination}
+          onChange={(e) => setSearch({ ...search, destination: e.target.value })}
+          required
+        />
+        <input
+          type="date"
+          name="date"
+          value={search.date}
+          onChange={(e) => setSearch({ ...search, date: e.target.value })}
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
-      <h3>Flights from Paris to London on 2024-06-15</h3>
+      <h3>Flight Results</h3>
       <ul>
         {flights.length > 0 ? (
           flights.map((flight, index) => (
