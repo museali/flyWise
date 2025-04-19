@@ -21,7 +21,8 @@ function RegisterPage() {
     const params = new URLSearchParams(formData).toString();
 
     try {
-      const res = await fetch(`http://localhost:8080/api/auth/register?${params}`, {
+      const res = await fetch(`http://localhost:8080/api/auth/register?${params}`
+      ,{
         method: 'POST'
       });
 
@@ -30,7 +31,8 @@ function RegisterPage() {
       } else {
         setMessage('❌ Registration failed');
       }
-    } catch (err) {
+      
+    }catch (error) {
       setMessage('❌ Network error');
     }
   };

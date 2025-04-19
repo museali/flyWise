@@ -30,10 +30,9 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Simple authority based on role name
         return Collections.singleton(() -> "ROLE_" + role.name());
     }
-
+    
     @Override
     public boolean isAccountNonExpired() {
         return true;
