@@ -4,45 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d117d42-ee4d-4a88-b383-2655c9110501" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/config/AmadeusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/controller/AmadeusController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/service/AmadeusService.java" afterDir="false" />
+    <list default="true" id="3d117d42-ee4d-4a88-b383-2655c9110501" name="Changes" comment="Amadeus api added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/dto/FlightDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/FlyWiseApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/FlyWiseApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/config/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/config/JwtAuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/controller/FlightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/controller/HolidayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/controller/HolidayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/dto/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/dto/LoginResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Flight$FlightBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Flight$FlightBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Holiday$HolidayBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Holiday$HolidayBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Holiday.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Holiday.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/RefreshToken$RefreshTokenBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/RefreshToken$RefreshTokenBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/RefreshToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/RefreshToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/FlightRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/FlightRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/HolidayRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/HolidayRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/RefreshTokenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/RefreshTokenRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/AuthService$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/AuthService$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/CustomUserDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/HolidayService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/HolidayService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/RefreshTokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/FlyWise/service/RefreshTokenService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/app/FlyWise/FlyWiseApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/app/FlyWise/FlyWiseApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/controller/AmadeusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/controller/AmadeusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/service/AmadeusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/FlyWise/service/AmadeusService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1739220089216</updated>
     </task>
+    <task id="LOCAL-00001" summary="Amadeus api added">
+      <created>1747587010246</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747587010246</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +108,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Amadeus api added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Amadeus api added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
