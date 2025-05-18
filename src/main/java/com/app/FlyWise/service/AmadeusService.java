@@ -26,7 +26,7 @@ public class AmadeusService {
 
     private String accessToken;
 
-    private String getAccessToken() {
+    String getAccessToken() {
         if (accessToken != null) return accessToken;
 
         HttpHeaders headers = new HttpHeaders();
