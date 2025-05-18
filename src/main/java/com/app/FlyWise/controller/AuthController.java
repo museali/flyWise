@@ -46,12 +46,17 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestParam String username,
-                                               @RequestParam String password) {
+                                            @RequestParam String password) {
         try {
             authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(username, password)
+                new UsernamePasswordAuthenticationToken(username, password)
             );
 
+            // Delete old token if exists
+            User user = authService.findByUsername(username);
+            refreshTokenService.deleteByUser(user);
+
+            // Create new tokens
             String accessToken = jwtService.generateToken(username);
             String refreshToken = refreshTokenService.createRefreshToken(username).getToken();
 
@@ -84,7 +89,7 @@ public class AuthController {
     @PostMapping("/logout")
     public ResponseEntity<String> logout(@RequestParam String username) {
         User user = authService.findByUsername(username);
-        refreshTokenService.deleteByUser(user);
+        refreshTokenService.deleteByUser(user); // 👈 delete token
         return ResponseEntity.ok("User logged out successfully.");
     }
 }
